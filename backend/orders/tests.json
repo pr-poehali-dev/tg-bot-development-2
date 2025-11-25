@@ -1,0 +1,31 @@
+{
+  "tests": [
+    {
+      "name": "Create order",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "email": "test@test.com",
+        "items": [
+          {
+            "photo_id": 1,
+            "quantity": 1,
+            "price": 990
+          }
+        ]
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "order_id": "number",
+        "status": "success"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get orders list",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200
+    }
+  ]
+}

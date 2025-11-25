@@ -1,0 +1,16 @@
+{
+  "tests": [
+    {
+      "name": "Get statistics",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "total_revenue": "number",
+        "orders_count": "number",
+        "popular_photos": "array"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
